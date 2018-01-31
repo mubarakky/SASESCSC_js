@@ -1,8 +1,9 @@
 "use strict";
 const pF = 0.8;
-const backupTime = 12;
+const backupTime = 12;  // in hrs.
 
 function sizingCalculator() {
+    //event.preventDefault();
     var load = document.getElementById("load").value;
     var panelRating = document.getElementById("pRating").value;
     var battVolt = document.getElementById("batteryVoltage").value;
@@ -13,12 +14,16 @@ function sizingCalculator() {
     var apparentPower = realPower/pF;
     var battVoltage = battVolt;
     var AH_rating = Math.round((maxLoad*backupTime*2)/battVoltage);
+    /*
     document.getElementById("load").innerHTML = "Load: "+load+" W\n";
     document.getElementById("maxLoad").innerHTML = "Max Load: "+maxLoad+" W\n";
     document.getElementById("npanels").innerHTML = "Number of Panels needed: "+noOfPanels+"\n";
     document.getElementById("invrating").innerHTML = "Inverter rating: "+apparentPower+" VA\n";
     document.getElementById("battvolt").innerHTML = "Battery Voltage: "+battVoltage+" V\n";
     document.getElementById("totalahreq").innerHTML = "Total AH required: "+AH_rating+" AH\n";
+    */
+    var result_string = "Load: "+load+" W\n"+"Max Load: "+maxLoad+" W\n"+"Number of Panels needed: "+noOfPanels+"\n"+"Inverter rating: "+apparentPower+" VA\n"+"Battery Voltage: "+battVoltage+" V\n"+"Total AH required: "+AH_rating+" AH\n";
+    window.alert(result_string);
     console.log("Load: "+load+" W\n");
     console.log("Max Load: "+maxLoad+" W\n");
     console.log("Number of Panels needed: "+noOfPanels+"\n");
