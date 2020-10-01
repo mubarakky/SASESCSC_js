@@ -65,9 +65,10 @@
       <div class="starter-template">
         <h1>SASESCSC_js</h1>
         <p class="lead">Sizing calculator.</p>
-        <p class="lead">Type the estimated load (Measured in watts).</p>
-        <p class="lead">Then type in the rated power output of the desired solar panel (Measured in watts).</p>
-        <p class="lead">Finally select the input dc voltage to the inverter.</p>
+        <p class="lead">Type the estimated load(W).</p>
+        <p class="lead">Type the Solar insolation of the location you'll use the system..</p>
+        <p class="lead">Then type in the rated power output(W) of the desired solar panel and the area it covers(m^2).</p>
+        <p class="lead">Finally select the input dc voltage(V) to the inverter.</p>
       </div>
 
       <div class="starter-template">
@@ -75,7 +76,9 @@
                 <div class="form-group">
                   <div class="row txtbx">
                     <input type="text" class="form-control" placeholder="Load" id="load">
-                    <input type="text" class="form-control" placeholder="Solar Panel rating" id="pRating">
+                    <input type="text" class="form-control" placeholder="Solar insolation" id="insolation">
+                    <input type="text" class="form-control" placeholder="Solar panel rating" id="pRating">
+                    <input type="text" class="form-control" placeholder="Solar panel area" id="pArea">
                     
                     <select id="batteryVoltage" class="form-control">
                       <option value="12">12V</option>

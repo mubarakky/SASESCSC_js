@@ -7,9 +7,12 @@ function sizingCalculator() {
     var load = document.getElementById("load").value;
     var panelRating = document.getElementById("pRating").value;
     var battVolt = document.getElementById("batteryVoltage").value;
+    var insolation = document.getElementById("insolation").value;
+    var panelArea = document.getElementById("pArea").value;
     var maxLoad = load*1.5;
-    var solarPanelOutput = maxLoad*2;
-    var noOfPanels = Math.round(solarPanelOutput/panelRating);
+    var solarPanelOutput = maxLoad*2;   // this needs modification
+    //var noOfPanels = Math.round(solarPanelOutput/panelRating);
+    var noOfPanels = Math.round((solarPanelOutput/1000)*24/(insolation*panelArea));
     var realPower = maxLoad;
     var apparentPower = realPower/pF;
     var battVoltage = battVolt;
